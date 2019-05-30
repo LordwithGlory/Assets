@@ -94,6 +94,7 @@ namespace MyUnity
             Debug.Log(pos);
             crtsen = guestStc;
             guestStc += "某人亮";
+            pos += 3;
         }
     }
 }
