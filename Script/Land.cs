@@ -25,7 +25,6 @@ namespace MyUnity
             Vector3 namePos = Camera.main.WorldToScreenPoint(this.transform.position);
             namePos.z = 0;
             nameLabel.transform.position = namePos;
-
         }
 
         void OnMouseDown()
@@ -33,6 +32,7 @@ namespace MyUnity
             // 加入一个碰撞器之后才可以 BOX COLINDER 2D
             Global.collectSen += nameLabel.text;
             Debug.Log(Global.collectSen);
+            nameLabel.text = "";
             Destroy(this.gameObject);
             //gameObject.GetComponent<Renderer>().enabled = false;
             gameObject.GetComponent<Renderer>().material.color = Color.green;
