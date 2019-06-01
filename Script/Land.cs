@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 namespace MyUnity
 {
-
     public class Land : MonoBehaviour
     {
         // private string uistr = "hello world";
