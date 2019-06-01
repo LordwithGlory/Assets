@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 namespace MyUnity
 {
+
     public class Land : MonoBehaviour
     {
         // private string uistr = "hello world";
@@ -30,6 +31,15 @@ namespace MyUnity
         void OnMouseDown()
         {
             // 加入一个碰撞器之后才可以 BOX COLINDER 2D
+            // if (MyUnity.Global.crtsen.IndexOf(nameLabel.text)!= Global.collectSen.Length)
+            if(!MyUnity.Global.crtsen.Contains(nameLabel.text))
+            {
+                gameObject.GetComponent<Renderer>().material.color = Color.red;
+                return;
+            }else if(MyUnity.Global.crtsen.IndexOf(nameLabel.text) != Global.collectSen.Length)
+            {
+                return;
+            }
             Global.collectSen += nameLabel.text;
             Debug.Log(Global.collectSen);
             nameLabel.text = "";

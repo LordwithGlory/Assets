@@ -20,6 +20,7 @@ public class Jump : MonoBehaviour
     public void jumpSence()
     {
         // mark the solution:https://blog.csdn.net/u011607490/article/details/84239490
+        // mark the bottom:https://www.cnblogs.com/isayes/p/6370168.html
         Debug.Log("Ready to jump!");
         SceneManager.LoadScene("SampleScene");
     }

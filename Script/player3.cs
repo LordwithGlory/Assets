@@ -93,8 +93,8 @@ namespace MyUnity
             pos = guestStc.Length - 1;
             Debug.Log(pos);
             crtsen = guestStc;
-            guestStc += "某人亮";
-            pos += 3;
+            guestStc += "雪亮";
+            pos += 2;
         }
     }
 }

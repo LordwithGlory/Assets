@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System;
+using System.Threading;
 
 namespace MyUnity
 {
@@ -34,7 +37,13 @@ namespace MyUnity
                         Debug.Log("On the toad");
                         if (MyUnity.Global.crtsen == textcon.text)
                         {
+                            gameObject.GetComponent<Renderer>().material.color = Color.blue;
                             Debug.Log("Get all");
+                            textcon.text = "";
+                            MyUnity.Global.setuptitle();
+                            MyUnity.Global.readpoetry();
+                            MyUnity.Global.collectSen = "";
+                            SceneManager.LoadScene("SampleScene");
                         }
                     }
                     else
